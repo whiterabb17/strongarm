@@ -1,8 +1,8 @@
-# GoSpray
+# whiterabb17/strongarm
  Simple tool to bruteforce (spray actually) different network protocols.
- GoSpray also supports restoration of interrupted tasks ("-restore").
+ whiterabb17/strongarm also supports restoration of interrupted tasks ("-restore").
  
- GoSpray currently supports: **rdp, ssh, ftp, Windows LDAP, http basic** and **digest authentication**
+ whiterabb17/strongarm currently supports: **rdp, ssh, ftp, Windows LDAP, http basic** and **digest authentication**
 
 
 ```

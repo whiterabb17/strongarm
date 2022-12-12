@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/GoSpray/grdp/core"
+	"github.com/whiterabb17/strongarm/grdp/core"
 )
 
 const (

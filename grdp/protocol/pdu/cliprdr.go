@@ -3,8 +3,8 @@ package pdu
 import (
 	"bytes"
 
-	"github.com/GoSpray/grdp/core"
-	"github.com/GoSpray/grdp/glog"
+	"github.com/whiterabb17/strongarm/grdp/core"
+	"github.com/whiterabb17/strongarm/grdp/glog"
 )
 
 /**
@@ -92,11 +92,13 @@ func NewCliprdrPDUHeader(mType, flags uint16, ln uint32) *CliprdrPDUHeader {
 	}
 }
 
-/*func (c *CliprdrPDU) serialize() []byte {
-	b := &bytes.Buffer{}
+/*
+	func (c *CliprdrPDU) serialize() []byte {
+		b := &bytes.Buffer{}
 
-	return b.Bytes()
-}
+		return b.Bytes()
+	}
+
 func (c *CliprdrPDU) SendCliprdrGeneralCapability() {
 
 }

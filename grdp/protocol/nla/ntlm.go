@@ -8,9 +8,9 @@ import (
 	"encoding/hex"
 	"time"
 
-	"github.com/GoSpray/grdp/core"
-	"github.com/GoSpray/grdp/glog"
 	"github.com/lunixbochs/struc"
+	"github.com/whiterabb17/strongarm/grdp/core"
+	"github.com/whiterabb17/strongarm/grdp/glog"
 )
 
 const (
@@ -313,7 +313,7 @@ func (n *NTLMv2) GetNegotiateMessage() *NegotiateMessage {
 	return n.negotiateMessage
 }
 
-//  process NTLMv2 Authenticate hash
+// process NTLMv2 Authenticate hash
 func (n *NTLMv2) ComputeResponseV2(respKeyNT, respKeyLM, serverChallenge, clientChallenge,
 	timestamp, serverInfo []byte) (ntChallResp, lmChallResp, SessBaseKey []byte) {
 

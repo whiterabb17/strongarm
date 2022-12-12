@@ -3,20 +3,21 @@ package grdp
 import (
 	"errors"
 	"fmt"
-	"github.com/GoSpray/grdp/core"
-	"github.com/GoSpray/grdp/glog"
-	"github.com/GoSpray/grdp/protocol/nla"
-	"github.com/GoSpray/grdp/protocol/pdu"
-	"github.com/GoSpray/grdp/protocol/rfb"
-	"github.com/GoSpray/grdp/protocol/sec"
-	"github.com/GoSpray/grdp/protocol/t125"
-	"github.com/GoSpray/grdp/protocol/tpkt"
-	"github.com/GoSpray/grdp/protocol/x224"
 	"log"
 	"net"
 	"os"
 	"sync"
 	"time"
+
+	"github.com/whiterabb17/strongarm/grdp/core"
+	"github.com/whiterabb17/strongarm/grdp/glog"
+	"github.com/whiterabb17/strongarm/grdp/protocol/nla"
+	"github.com/whiterabb17/strongarm/grdp/protocol/pdu"
+	"github.com/whiterabb17/strongarm/grdp/protocol/rfb"
+	"github.com/whiterabb17/strongarm/grdp/protocol/sec"
+	"github.com/whiterabb17/strongarm/grdp/protocol/t125"
+	"github.com/whiterabb17/strongarm/grdp/protocol/tpkt"
+	"github.com/whiterabb17/strongarm/grdp/protocol/x224"
 )
 
 const (
@@ -238,4 +239,3 @@ func VerifyProtocol(target string) string {
 	}
 	return PROTOCOL_RDP
 }
-

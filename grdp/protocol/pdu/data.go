@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/GoSpray/grdp/core"
-	"github.com/GoSpray/grdp/glog"
 	"github.com/lunixbochs/struc"
+	"github.com/whiterabb17/strongarm/grdp/core"
+	"github.com/whiterabb17/strongarm/grdp/glog"
 )
 
 const (

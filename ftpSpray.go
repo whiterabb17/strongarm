@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/whiterabb17/stringarm/goftp"
+	"github.com/whiterabb17/strongarm/goftp"
 )
 
 func ftpSpray(wg *sync.WaitGroup, channelToCommunicate chan string, taskToRun task, storeResult *int) {

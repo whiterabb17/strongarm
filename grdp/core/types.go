@@ -1,6 +1,6 @@
 package core
 
-import "github.com/whiterabb17/stringarm/grdp/emission"
+import "github.com/whiterabb17/strongarm/grdp/emission"
 
 type Transport interface {
 	Read(b []byte) (n int, err error)

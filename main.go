@@ -55,7 +55,7 @@ func getIPs(path string) []string {
 	return fileLines
 }
 
-func BeginBrute(userlist string, passlist string, rndUlist bool, rndPlist bool, proto string, targets string, wrkr int) {
+func beginBrute(userlist string, passlist string, rndUlist bool, rndPlist bool, proto string, targets string, wrkr int) {
 	pathToUsernameList = userlist
 	pathToPasswordList = passlist
 	usernameListRandomization = rndUlist
@@ -76,6 +76,7 @@ func BeginBrute(userlist string, passlist string, rndUlist bool, rndPlist bool, 
 			}
 		}
 	*/
+	startTaskService()
 }
 
 func printSuccessfulLogin(c chan string) {
@@ -100,7 +101,7 @@ type runningTask struct {
 
 var currentTask runningTask
 
-func main() {
+func startTaskService() { // main() {
 	if restoreTask == true {
 		err := readGob("./progress.gob", &currentTask)
 		if err != nil {
