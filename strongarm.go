@@ -37,6 +37,11 @@ func init() {
 	flag.Parse()
 }
 
+func PluginService() {
+	//log.Printf("Path to User: %s\nPath to Pass: %s\nUserRandomization: %v\nPassRandomization: %v\nProtocal: %s\nTarget: %s\nWorkers: %c", PathToUsernameList, PathToPasswordList, UsernameListRandomization, PasswordListRandomization, Protocol, Target, WorkersNumber)
+	beginBrute(PathToUsernameList, PathToPasswordList, UsernameListRandomization, PasswordListRandomization, Protocol, Target, WorkersNumber)
+}
+
 func getIPs(path string) []string {
 	readFile, err := os.Open(path)
 

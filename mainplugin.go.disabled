@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 type Symbol any
 
 type Plugin struct {
@@ -22,7 +20,9 @@ var (
 	TaskStateObj              taskState
 )
 
+/*
 func PluginService() {
 	log.Printf("Path to User: %s\nPath to Pass: %s\nUserRandomization: %v\nPassRandomization: %v\nProtocal: %s\nTarget: %s\nWorkers: %c", PathToUsernameList, PathToPasswordList, UsernameListRandomization, PasswordListRandomization, Protocol, Target, WorkersNumber)
 	//beginBrute(PathToUsernameList, PathToPasswordList, UsernameListRandomization, PasswordListRandomization, Protocol, Target, WorkersNumber)
 }
+*/
