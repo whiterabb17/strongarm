@@ -4,6 +4,7 @@ import (
 	// "os"
 	"bufio"
 	"fmt"
+	"log"
 	"math/rand"
 	"os"
 	"strings"
@@ -69,7 +70,7 @@ func printSuccessfulLogin(c chan string) {
 }
 
 var (
-	restoreTask               bool
+	restoreTask               bool = false
 	pathToUsernameList        string
 	usernameListRandomization bool
 	pathToPasswordList        string
@@ -78,8 +79,8 @@ var (
 	ipList                    bool
 	target                    string
 	//targetList                []string
-	workersNumber             int
-	taskStateObj              taskState
+	workersNumber int
+	taskStateObj  taskState
 )
 
 type runningTask struct {
@@ -162,6 +163,7 @@ func startTaskService() { // main() {
 		}
 	} else if currentTask.ProtocolToSpray == "ssh" {
 		for _, task := range tasks {
+			log.Println(task)
 			wg.Add(1)
 			go sshSpray(&wg, channelForWorker, task, &currentTask.WorkersStates[iter].WorkerProgress)
 			iter++
