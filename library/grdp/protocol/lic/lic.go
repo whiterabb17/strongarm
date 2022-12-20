@@ -3,7 +3,7 @@ package lic
 import (
 	"io"
 
-	"github.com/whiterabb17/strongarm/packages/grdp/core"
+	"github.com/whiterabb17/strongarm/library/grdp/core"
 )
 
 const (

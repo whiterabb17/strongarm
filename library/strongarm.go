@@ -68,6 +68,20 @@ func printSuccessfulLogin(c chan string) {
 
 }
 
+var (
+	restoreTask               bool
+	pathToUsernameList        string
+	usernameListRandomization bool
+	pathToPasswordList        string
+	passwordListRandomization bool
+	protocol                  string
+	ipList                    bool
+	target                    string
+	targetList                []string
+	workersNumber             int
+	taskStateObj              taskState
+)
+
 type runningTask struct {
 	RandomSeed             int64
 	UsersList              string

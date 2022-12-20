@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/whiterabb17/strongarm/packages/grdp/glog"
+	"github.com/whiterabb17/strongarm/library/grdp/glog"
 
-	"github.com/whiterabb17/strongarm/packages/grdp/core"
+	"github.com/whiterabb17/strongarm/library/grdp/core"
 )
 
 func ReadEnumerates(r io.Reader) (uint8, error) {

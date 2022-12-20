@@ -3,7 +3,7 @@ package nla
 import (
 	"encoding/asn1"
 
-	"github.com/whiterabb17/strongarm/packages/grdp/glog"
+	"github.com/whiterabb17/strongarm/library/grdp/glog"
 )
 
 type NegoToken struct {

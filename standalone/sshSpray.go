@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/whiterabb17/strongarm/packages/gossh"
+	"github.com/whiterabb17/strongarm/library/gossh"
 )
 
 func sshSpray(wg *sync.WaitGroup, channelToCommunicate chan string, taskToRun task, storeResult *int) {

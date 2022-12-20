@@ -4,13 +4,13 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/whiterabb17/strongarm/packages/grdp"
-	"github.com/whiterabb17/strongarm/packages/grdp/glog"
-	"github.com/whiterabb17/strongarm/packages/grdp/protocol/pdu"
-	"github.com/whiterabb17/strongarm/packages/grdp/protocol/sec"
-	"github.com/whiterabb17/strongarm/packages/grdp/protocol/t125"
-	"github.com/whiterabb17/strongarm/packages/grdp/protocol/tpkt"
-	"github.com/whiterabb17/strongarm/packages/grdp/protocol/x224"
+	"github.com/whiterabb17/strongarm/library/grdp"
+	"github.com/whiterabb17/strongarm/library/grdp/glog"
+	"github.com/whiterabb17/strongarm/library/grdp/protocol/pdu"
+	"github.com/whiterabb17/strongarm/library/grdp/protocol/sec"
+	"github.com/whiterabb17/strongarm/library/grdp/protocol/t125"
+	"github.com/whiterabb17/strongarm/library/grdp/protocol/tpkt"
+	"github.com/whiterabb17/strongarm/library/grdp/protocol/x224"
 )
 
 type Client struct {

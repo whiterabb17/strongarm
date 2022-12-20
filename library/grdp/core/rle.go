@@ -3,7 +3,7 @@ package core
 import (
 	"unsafe"
 
-	"github.com/whiterabb17/strongarm/packages/grdp/glog"
+	"github.com/whiterabb17/strongarm/library/grdp/glog"
 )
 
 func CVAL(p *[]uint8) int {

@@ -4,7 +4,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/whiterabb17/strongarm/packages/grdp/protocol/nla"
+	"github.com/whiterabb17/strongarm/library/grdp/protocol/nla"
 )
 
 func TestNTOWFv2(t *testing.T) {

@@ -5,10 +5,10 @@ import (
 	"encoding/hex"
 	"fmt"
 
-	"github.com/whiterabb17/strongarm/packages/grdp/core"
-	"github.com/whiterabb17/strongarm/packages/grdp/emission"
-	"github.com/whiterabb17/strongarm/packages/grdp/glog"
-	"github.com/whiterabb17/strongarm/packages/grdp/protocol/nla"
+	"github.com/whiterabb17/strongarm/library/grdp/core"
+	"github.com/whiterabb17/strongarm/library/grdp/emission"
+	"github.com/whiterabb17/strongarm/library/grdp/glog"
+	"github.com/whiterabb17/strongarm/library/grdp/protocol/nla"
 )
 
 // take idea from https://github.com/Madnikulin50/gordp

@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/lunixbochs/struc"
-	"github.com/whiterabb17/strongarm/packages/grdp/core"
-	"github.com/whiterabb17/strongarm/packages/grdp/glog"
+	"github.com/whiterabb17/strongarm/library/grdp/core"
+	"github.com/whiterabb17/strongarm/library/grdp/glog"
 )
 
 const (

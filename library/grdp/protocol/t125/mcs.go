@@ -8,12 +8,12 @@ import (
 	"io"
 	"reflect"
 
-	"github.com/whiterabb17/strongarm/packages/grdp/core"
-	"github.com/whiterabb17/strongarm/packages/grdp/emission"
-	"github.com/whiterabb17/strongarm/packages/grdp/glog"
-	"github.com/whiterabb17/strongarm/packages/grdp/protocol/t125/ber"
-	"github.com/whiterabb17/strongarm/packages/grdp/protocol/t125/gcc"
-	"github.com/whiterabb17/strongarm/packages/grdp/protocol/t125/per"
+	"github.com/whiterabb17/strongarm/library/grdp/core"
+	"github.com/whiterabb17/strongarm/library/grdp/emission"
+	"github.com/whiterabb17/strongarm/library/grdp/glog"
+	"github.com/whiterabb17/strongarm/library/grdp/protocol/t125/ber"
+	"github.com/whiterabb17/strongarm/library/grdp/protocol/t125/gcc"
+	"github.com/whiterabb17/strongarm/library/grdp/protocol/t125/per"
 )
 
 // take idea from https://github.com/Madnikulin50/gordp
