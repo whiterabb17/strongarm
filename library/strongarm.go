@@ -77,7 +77,7 @@ var (
 	protocol                  string
 	ipList                    bool
 	target                    string
-	targetList                []string
+	//targetList                []string
 	workersNumber             int
 	taskStateObj              taskState
 )
