@@ -14,14 +14,14 @@ import (
 
 	"github.com/lunixbochs/struc"
 
-	"github.com/whiterabb17/strongarm/grdp/protocol/nla"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/nla"
 
-	"github.com/whiterabb17/strongarm/grdp/core"
-	"github.com/whiterabb17/strongarm/grdp/emission"
-	"github.com/whiterabb17/strongarm/grdp/glog"
-	"github.com/whiterabb17/strongarm/grdp/protocol/lic"
-	"github.com/whiterabb17/strongarm/grdp/protocol/t125"
-	"github.com/whiterabb17/strongarm/grdp/protocol/t125/gcc"
+	"github.com/whiterabb17/strongarm/packages/grdp/core"
+	"github.com/whiterabb17/strongarm/packages/grdp/emission"
+	"github.com/whiterabb17/strongarm/packages/grdp/glog"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/lic"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/t125"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/t125/gcc"
 )
 
 /**

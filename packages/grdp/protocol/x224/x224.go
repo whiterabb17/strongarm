@@ -6,12 +6,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/whiterabb17/strongarm/grdp/glog"
+	"github.com/whiterabb17/strongarm/packages/grdp/glog"
 
 	"github.com/lunixbochs/struc"
-	"github.com/whiterabb17/strongarm/grdp/core"
-	"github.com/whiterabb17/strongarm/grdp/emission"
-	"github.com/whiterabb17/strongarm/grdp/protocol/tpkt"
+	"github.com/whiterabb17/strongarm/packages/grdp/core"
+	"github.com/whiterabb17/strongarm/packages/grdp/emission"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/tpkt"
 )
 
 // take idea from https://github.com/Madnikulin50/gordp

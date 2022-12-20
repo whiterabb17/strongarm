@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/whiterabb17/strongarm/grdp/core"
+	"github.com/whiterabb17/strongarm/packages/grdp/core"
 )
 
 const (

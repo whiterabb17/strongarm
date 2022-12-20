@@ -12,9 +12,9 @@ import (
 
 	"github.com/lunixbochs/struc"
 
-	"github.com/whiterabb17/strongarm/grdp/core"
-	"github.com/whiterabb17/strongarm/grdp/emission"
-	"github.com/whiterabb17/strongarm/grdp/glog"
+	"github.com/whiterabb17/strongarm/packages/grdp/core"
+	"github.com/whiterabb17/strongarm/packages/grdp/emission"
+	"github.com/whiterabb17/strongarm/packages/grdp/glog"
 )
 
 // ProtocolVersion

@@ -9,15 +9,15 @@ import (
 	"sync"
 	"time"
 
-	"github.com/whiterabb17/strongarm/grdp/core"
-	"github.com/whiterabb17/strongarm/grdp/glog"
-	"github.com/whiterabb17/strongarm/grdp/protocol/nla"
-	"github.com/whiterabb17/strongarm/grdp/protocol/pdu"
-	"github.com/whiterabb17/strongarm/grdp/protocol/rfb"
-	"github.com/whiterabb17/strongarm/grdp/protocol/sec"
-	"github.com/whiterabb17/strongarm/grdp/protocol/t125"
-	"github.com/whiterabb17/strongarm/grdp/protocol/tpkt"
-	"github.com/whiterabb17/strongarm/grdp/protocol/x224"
+	"github.com/whiterabb17/strongarm/packages/grdp/core"
+	"github.com/whiterabb17/strongarm/packages/grdp/glog"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/nla"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/pdu"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/rfb"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/sec"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/t125"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/tpkt"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/x224"
 )
 
 const (
