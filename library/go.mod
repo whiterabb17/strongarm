@@ -1,4 +1,4 @@
-module github.com/whiterabb17/strongarm
+module github.com/whiterabb17/strongarm/library
 
 go 1.19
 
