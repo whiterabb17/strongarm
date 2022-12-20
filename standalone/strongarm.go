@@ -3,7 +3,6 @@ package main
 import (
 	// "os"
 	"bufio"
-	"flag"
 	"fmt"
 	"math/rand"
 	"os"
@@ -13,34 +12,11 @@ import (
 	// "FtpSpray"
 )
 
-var restoreTask bool
-var pathToUsernameList string
-var usernameListRandomization bool
-var pathToPasswordList string
-var passwordListRandomization bool
-var protocol string
-var ipList bool
-var target string
-var targetList []string
-var workersNumber int
-var taskStateObj taskState
-
-func init() {
-	flag.BoolVar(&restoreTask, "restore", false, "Restore task")
-	flag.StringVar(&pathToUsernameList, "ul", "usernames.txt", "Path to usernames list")
-	flag.StringVar(&pathToPasswordList, "pl", "passwords.txt", "Path to passwords list")
-	flag.BoolVar(&usernameListRandomization, "ru", false, "Randomize users list")
-	flag.BoolVar(&passwordListRandomization, "rp", false, "Randomize passwords list")
-	flag.StringVar(&protocol, "p", "ftp", "Protocol (ftp,ssh,httpbasic,httpdigest,rdp,winldap)")
-	flag.StringVar(&target, "t", "10.0.0.1:21", "Target")
-	flag.IntVar(&workersNumber, "w", 5, "Number of Workers")
-	flag.Parse()
-}
-
-func PluginService() {
-	//log.Printf("Path to User: %s\nPath to Pass: %s\nUserRandomization: %v\nPassRandomization: %v\nProtocal: %s\nTarget: %s\nWorkers: %c", PathToUsernameList, PathToPasswordList, UsernameListRandomization, PasswordListRandomization, Protocol, Target, WorkersNumber)
-	beginBrute(PathToUsernameList, PathToPasswordList, UsernameListRandomization, PasswordListRandomization, Protocol, Target, WorkersNumber)
-}
+// PLUGIN FUNCTION
+// func PluginService() {
+// 	//log.Printf("Path to User: %s\nPath to Pass: %s\nUserRandomization: %v\nPassRandomization: %v\nProtocal: %s\nTarget: %s\nWorkers: %c", PathToUsernameList, PathToPasswordList, UsernameListRandomization, PasswordListRandomization, Protocol, Target, WorkersNumber)
+// 	BeginBrute(PathToUsernameList, PathToPasswordList, UsernameListRandomization, PasswordListRandomization, Protocol, Target, WorkersNumber)
+// }
 
 func getIPs(path string) []string {
 	readFile, err := os.Open(path)
@@ -60,7 +36,7 @@ func getIPs(path string) []string {
 	return fileLines
 }
 
-func beginBrute(userlist string, passlist string, rndUlist bool, rndPlist bool, proto string, targets string, wrkr int) {
+func BeginBrute(userlist string, passlist string, rndUlist bool, rndPlist bool, proto string, targets string, wrkr int) {
 	pathToUsernameList = userlist
 	pathToPasswordList = passlist
 	usernameListRandomization = rndUlist
@@ -107,7 +83,7 @@ type runningTask struct {
 var currentTask runningTask
 
 func startTaskService() { // main() {
-	if restoreTask == true {
+	if restoreTask {
 		err := readGob("./progress.gob", &currentTask)
 		if err != nil {
 			fmt.Println(err)

@@ -1,16 +1,16 @@
-package main
+package strongarm
 
 import (
 	"fmt"
 	"sync"
 
-	"github.com/whiterabb17/strongarm/grdp"
-	"github.com/whiterabb17/strongarm/grdp/glog"
-	"github.com/whiterabb17/strongarm/grdp/protocol/pdu"
-	"github.com/whiterabb17/strongarm/grdp/protocol/sec"
-	"github.com/whiterabb17/strongarm/grdp/protocol/t125"
-	"github.com/whiterabb17/strongarm/grdp/protocol/tpkt"
-	"github.com/whiterabb17/strongarm/grdp/protocol/x224"
+	"github.com/whiterabb17/strongarm/packages/grdp"
+	"github.com/whiterabb17/strongarm/packages/grdp/glog"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/pdu"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/sec"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/t125"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/tpkt"
+	"github.com/whiterabb17/strongarm/packages/grdp/protocol/x224"
 )
 
 type Client struct {
