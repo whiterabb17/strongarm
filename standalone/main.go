@@ -1,6 +1,10 @@
 package main
 
-import "flag"
+import (
+	"flag"
+
+	strongarm "github.com/whiterabb17/strongarm/library"
+)
 
 var (
 	RestoreTask               bool
@@ -42,5 +46,5 @@ func init() {
 
 func main() {
 	flag.Parse()
-	BeginBrute(PathToUsernameList, PathToPasswordList, UsernameListRandomization, PasswordListRandomization, Protocol, Target, WorkersNumber)
+	strongarm.BeginBrute(PathToUsernameList, PathToPasswordList, UsernameListRandomization, PasswordListRandomization, Protocol, Target, WorkersNumber)
 }
