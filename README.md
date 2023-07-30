@@ -6,15 +6,15 @@
 
 
 ```
-go run . -ul testUsernames.txt -pl testPasswords.txt -p ftp -t 192.168.56.102:21 -w 10
+go run . -ul testUsernames.txt -pl testPasswords.txt -p ftp -tl targets.txt -w 10
 ---------------+
-Success: user:123
+Success: 192.168.56.102:user:123
 -------------------
 ```
 
 
 ```
-go run . -ul testUsernames.txt -pl testPasswords.txt -p ftp -t 192.168.56.102:21 -w 10
+go run . -ul testUsernames.txt -pl testPasswords.txt -p ftp -tl targets.txt -w 10
 --------
 
 CTRL+C
@@ -38,21 +38,22 @@ Success: user:123
 -restore use "progress.gob" to restore task
  
 
+**Target Formats:**
+
+```
+192.168.56.102 - for **ssh, rdp, ldap, ftp**
+
+192.168.56.102:21 - for **ssh, rdp, ldap, ftp**
+
+http://192.168.56.102:80/2 - for **basic** and **digest authentication**
+```
  
 **Examples:**
 
 ```
-strongarm.exe -ul testUsernames.txt -pl testPasswords.txt -p ssh -t 192.168.56.102 -w 10
+strongarm.exe -ul testUsernames.txt -pl testPasswords.txt -p ssh -tl targets.txt -w 10
 
-strongarm.exe -ul testUsernames.txt -pl testPasswords.txt -p ftp -t 192.168.56.102:21 -w 10
-
-strongarm.exe -ul testUsernames.txt -pl testPasswords.txt -p rdp -t 192.168.56.105 -w 10
-
-strongarm.exe -ul testUsernames.txt -pl testPasswords.txt -p httpbasic -t http://192.168.56.102:80/2 -w 10 -ru -rp
-
-strongarm.exe -ul testUsernames.txt -pl testPasswords.txt -p httpdigest -t http://192.168.56.102/1 -w 10
-
-strongarm.exe -ul testUsernames.txt -pl testPasswords.txt -p winldap -t 192.168.56.106 -w 10
+strongarm.exe -ul testUsernames.txt -pl testPasswords.txt -p httpbasic -tl targets.txt -w 10 -ru -rp
 
 strongarm.exe -restore
 ```
